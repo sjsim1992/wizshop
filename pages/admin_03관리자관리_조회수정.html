@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+    <body>
+
+        <!-- 헤더영역 -->
+        <header>
+            <div class="top">
+                <div class="logo">WIZ SHOP ADMIN</div>
+
+                <ul class="quick-menu">
+                    <li><a href="#">대시보드</a></li>
+                    <li><a href="#">채널별 소속관리</a></li>
+                    <li><a href="#">주문관리</a></li>
+                    <li>
+                        <a href="#">운영관리</a>
+                        <ul>
+                            <li><a href="#">문의 관리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">설정관리</a></li>
+                    <li>
+                        <a href="#" class="on">채널관리</a>
+                        <ul>
+                            <li><a href="#">채널 정보 관리</a></li>
+                            <li><a href="#">채널별 소속관리</a></li>
+                            <li><a href="#">이용중인 사이트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">회원관리</a></li>
+                    <li><a href="#">시스템관리</a></li>
+                </ul>
+
+                <ul class="header-menu">
+                    <li><span>홍길동</span>님</li>
+                    <li class="logout">
+                        로그아웃
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- 헤더영역 END -->
+
+
+
+        <div class="container">
+            <!-- 메뉴 영역 -->
+            <div class="gnbWrap">
+                <ul class="gnb">
+                    <li><a href="#" class="li-set">설정관리</a></li>
+                    <li>
+                        <a href="#" class="li-product">상품관리</a>
+                        <ul class="lnb">
+                            <li><a href="#">채널별 상품관리</a></li>
+                            <li><a href="#">견적서 설정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="li-menu">메뉴관리</a>
+                        <ul class="lnb">
+                            <li><a href="#">관리자 메뉴 관리</a></li>
+                            <li><a href="#">사용자 메뉴 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="li-authority on">권한관리</a>
+                        <ul class="lnb">
+                            <li><a href="#" class="on">그룹 권한 관리</a></li>
+                            <li><a href="#">개별 권한 관리</a></li>
+                            <li><a href="#">계정별 권한 관리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="li-alarm">알림설정</a></li>
+                    <li><a href="#" class="li-mail">메일폼관리</a></li>
+                </ul>
+            </div>
+
+            <script>
+                $(document).on('click', '.gnb > li > a', function () {
+                    $('.gnb > li > a').removeClass('on');
+                    $(this).addClass('on');
+                });
+            </script>
+            <!-- 메뉴 영역 END -->
+
+
+            <div class="cont-wrap">
+                <div class="cont-top">
+                    <div class="pageTitle">
+                        관리자관리
+                    </div>
+                    <ul class="locationBar">
+                        <li>회원관리</li>
+                        <li>관리자관리</li>
+                    </ul>
+                </div>
+                <div class="contents">
+
+                    <!-- 
+                    페이지 내용 들어오는 영역
+                    -->
+
+                    <div class="cont-gridbox">
+                        <div class="cont-box">
+                            <div class="box-co">
+
+                                <table class="basicTBL">
+                                    <colgroup>
+                                        <col style="width:150px;">
+                                        <col style="">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>부서</th>
+                                            <td>
+                                                <select>
+                                                    <option>부서를 선택하세요</option>
+                                                </select>
+                                                <span class="tooltip-red">부서가 변경될 경우 사용 권한이 변경 될 수 있습니다.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>이름
+                                                <span class="necessary"><div>필수</div></span>
+                                            </th>
+                                            <td>
+                                                <input type="text" >
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>아이디
+                                                <span class="necessary"><div>필수</div></span>
+                                            </th>
+                                            <td>
+                                                <input type="text" >
+                                                <a href="#" class="black-Btn">중복확인</a>
+                                                <span class="tooltip-red">아이디 중복확인이 필요합니다. </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>휴대폰</th>
+                                            <td>
+                                                <input type="text">
+                                                <span class="tooltip-blue">‘-’ 없이 숫자만 입력</span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>비밀번호
+                                                <span class="necessary"><div>필수</div></span>
+                                            </th>
+                                            <td>
+                                                <input type="password">
+                                                <span class="tooltip-red">비밀번호는 대소문자, 숫자, 특수문자를 포함하여 최소 8자리 이상으로 등록해 주시기 바랍니다.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>비밀번호</th>
+                                            <td>
+                                                <button type="button" class="black-Btn">비밀번호 초기화</button>
+                                                <span class="tooltip-red">비밀번호 초기화시 비밀번호는 강제로 ‘abcd-1234’로 설정 됩니다. 반드시 비밀번호를 변경 하신 후 이용하시기 바랍니다.</span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>비밀번호 확인
+                                                <span class="necessary"><div>필수</div></span>
+                                            </th>
+                                            <td>
+                                                <input type="password">
+                                                <span class="tooltip-red">비밀번호와 동일한 문자를 입력해 주시기 바랍니다.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>근무여부</th>
+                                            <td>
+                                                <ul class="wzForm">
+                                                    <li>
+                                                        <input type="radio" id="srchdate01" name="srchdate" checked="">
+                                                        <label for="srchdate01">재직</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="srchdate02" name="srchdate">
+                                                        <label for="srchdate02">퇴사</label>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>사용여부</th>
+                                            <td>
+                                                <ul class="wzForm">
+                                                    <li>
+                                                        <input type="radio" id="srchdate03" name="srchdate2" checked="">
+                                                        <label for="srchdate03">사용</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="srchdate04" name="srchdate2">
+                                                        <label for="srchdate04">미사용</label>
+                                                    </li>
+                                                </ul>
+                                                <span class="tooltip-red">근무여부가 ‘퇴사＇인 경우 사용여부는 자동으로 ‘미사용＇으로 설정 됩니다.</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            
+                            <div class="box-out-area btnbox txt-r">
+                                <button type="button" class="black-Btn">비밀번호 초기화</button>
+                                <button type="button" class="regist-Btn">등록/수정</button>
+                                <button type="button" class="delete-Btn">삭제</button>
+                                <button type="button" class="basic-Btn">목록</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+                <!-- 푸터 영역 -->
+                <div class="footer">
+                    <p>
+                        Copyright ⓒ 2026 WIZWIG CO., LTD. All rights reserved.
+                    </p>
+                </div>
+                <!-- 푸터 영역 END -->
+            </div>
+        </div>
+
+
+
+
+
+
+    
+
+
+    </body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+    <body>
+
+        <!-- 헤더영역 -->
+        <header>
+            <div class="top">
+                <div class="logo">WIZ SHOP ADMIN</div>
+
+                <ul class="quick-menu">
+                    <li><a href="#">대시보드</a></li>
+                    <li><a href="#">채널별 소속관리</a></li>
+                    <li><a href="#">주문관리</a></li>
+                    <li>
+                        <a href="#">운영관리</a>
+                        <ul>
+                            <li><a href="#">문의 관리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">설정관리</a></li>
+                    <li>
+                        <a href="#" class="on">채널관리</a>
+                        <ul>
+                            <li><a href="#">채널 정보 관리</a></li>
+                            <li><a href="#">채널별 소속관리</a></li>
+                            <li><a href="#">이용중인 사이트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">회원관리</a></li>
+                    <li><a href="#">시스템관리</a></li>
+                </ul>
+
+                <ul class="header-menu">
+                    <li><span>홍길동</span>님</li>
+                    <li class="logout">
+                        로그아웃
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- 헤더영역 END -->
+
+
+
+        <div class="container">
+            <!-- 메뉴 영역 -->
+            <div class="gnbWrap">
+                <ul class="gnb">
+                    <li><a href="#" class="li-set">설정관리</a></li>
+                    <li>
+                        <a href="#" class="li-product">상품관리</a>
+                        <ul class="lnb">
+                            <li><a href="#">채널별 상품관리</a></li>
+                            <li><a href="#">견적서 설정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="li-menu">메뉴관리</a>
+                        <ul class="lnb">
+                            <li><a href="#">관리자 메뉴 관리</a></li>
+                            <li><a href="#">사용자 메뉴 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="li-authority on">권한관리</a>
+                        <ul class="lnb">
+                            <li><a href="#" class="on">그룹 권한 관리</a></li>
+                            <li><a href="#">개별 권한 관리</a></li>
+                            <li><a href="#">계정별 권한 관리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="li-alarm">알림설정</a></li>
+                    <li><a href="#" class="li-mail">메일폼관리</a></li>
+                </ul>
+            </div>
+
+            <script>
+                $(document).on('click', '.gnb > li > a', function () {
+                    $('.gnb > li > a').removeClass('on');
+                    $(this).addClass('on');
+                });
+            </script>
+            <!-- 메뉴 영역 END -->
+
+
+            <div class="cont-wrap">
+                <div class="cont-top">
+                    <div class="pageTitle">
+                        사용자 회원관리
+                    </div>
+                    <ul class="locationBar">
+                        <li>회원관리</li>
+                        <li>사용자 회원관리</li>
+                    </ul>
+                </div>
+                <div class="contents">
+
+                    <!-- 
+                    페이지 내용 들어오는 영역
+                    -->
+
+                    <div class="cont-gridbox">
+                        <div class="cont-box">
+                            <div class="srchbox">
+                                <ul>
+                                    <li class="wd50">
+                                        <div class="srchTit">채널</div>
+                                        <div>
+                                            <select>
+                                                <option>채널을 선택하세요</option>
+                                                <option>채널을 선택하세요</option>
+                                            </select>
+                                        </div>
+                                    </li>
+
+                                    <li class="wd50">
+                                        <div class="srchTit">회원 상태</div>
+                                        <div>
+                                            <ul class="wzForm">
+                                                <li>
+                                                    <input type="checkbox" id="reqState01" name="reqState" checked/>
+                                                    <label for="reqState01">정상</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="reqState02" name="reqState" checked/>
+                                                    <label for="reqState02">승인대기</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="reqState03" name="reqState">
+                                                    <label for="reqState03">탈퇴</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="wd50">
+                                        <div class="srchTit">검색어</div>
+                                        <div>
+                                            <select>
+                                                <option>전체</option>
+                                                <option>상품명</option>
+                                                <option>제목</option>
+                                                <option>내용</option>
+                                            </select>
+                                            <input type="text" placeholder="검색어를 입력하세요.">
+                                        </div>
+                                    </li>
+                                    <li class="btnbox">
+                                        <button type="button" class="reset-Btn">검색조건 초기화</button>
+                                        <button type="button" class="srch-Btn">검색</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cont-gridbox">
+                        <div class="cont-box">
+                            <div class="box-out-area">
+                                <div class="outTit totaltxt">총 <b>20</b>건</div>
+                                <div class="txt-r">
+                                    <select>
+                                        <option>10건</option>
+                                        <option>20건</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="box-co">
+
+                                <table class="basicTBL">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%;">NO</th>
+                                        <th style="width: 8%;">고유코드</th>
+                                        <th style="width: 10%;">채널</th>
+                                        <th style="width: 13%;">아이디</th>
+                                        <th style="width: 10%;">이름</th>
+                                        <th style="width: 10%;">휴대폰</th>
+                                        <th style="width: 10%;">회원상태</th>
+                                        <th style="width: 10%;">가입일</th>
+                                        <th style="width: 10%;">탈퇴일</th>
+                                        <th style="width: 10%;">관리</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>wiz00101</td>
+                                        <td>서울과기대</td>
+                                        <td>honggil123@naver.com</td>
+                                        <td>홍길동</td>
+                                        <td>010-****-5678</td>
+                                        <td>
+                                            <a href="#" class="black-Btn">승인대기</a>
+                                        </td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>
+                                            <a href="#" class="set-Btn">설정</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>23</td>
+                                        <td>wiz00101</td>
+                                        <td>서울과기대</td>
+                                        <td>honggil123@naver.com</td>
+                                        <td>홍길동</td>
+                                        <td>010-****-5678</td>
+                                        <td><span class="status-blue">정상</span></td>
+                                        <td>2023-07-18</td>
+                                        <td>-</td>
+                                        <td>
+                                            <a href="#" class="set-Btn">설정</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td>
+                                        <td>wiz00101</td>
+                                        <td>서울대</td>
+                                        <td>honggil123@naver.com</td>
+                                        <td>홍길동</td>
+                                        <td>010-****-5678</td>
+                                        <td><span class="status-red">탈퇴</span></td>
+                                        <td>2023-07-18</td>
+                                        <td>2026-03-01</td>
+                                        <td>
+                                            <a href="#" class="set-Btn">설정</a>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                                </table>
+
+                                <ul class="num">
+                                    <li class="first prev"><a href="#" title="처음 페이지로 이동">◀처음</a></li>
+                                    <li class="prev"><a href="#" title="이전 페이지로 이동">◀이전</a></li>
+                                    <li class="num"><a href="#" class="on" title="현재페이지">1</a></li>
+                                    <li class="num"><a href="#" title="2번 페이지">2</a></li>
+                                    <li class="num"><a href="#" title="3번 페이지">3</a></li>
+                                    <li class="num"><a href="#" title="4번 페이지">4</a></li>
+                                    <li class="num"><a href="#" title="5 page">5</a></li>
+                                    <li class="next"><a href="#" title="다음 페이지로 이동">다음▶</a></li>
+                                    <li class="last next"><a href="#" title="마지막 페이지로 이동">마지막▶</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+                <!-- 푸터 영역 -->
+                <div class="footer">
+                    <p>
+                        Copyright ⓒ 2026 WIZWIG CO., LTD. All rights reserved.
+                    </p>
+                </div>
+                <!-- 푸터 영역 END -->
+            </div>
+        </div>
+
+
+
+
+
+
+    
+
+
+    </body>
+</html>
