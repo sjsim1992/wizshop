@@ -121,27 +121,9 @@ header .quick-menu>li:hover>ul {height: auto; padding-top: 42px;}
   .wzpopup .basicTBL tbody th ~ td:has(input[type="text"]) {border-bottom:none;}
 
 
-.necessary {position: relative; height: 5px; display: inline-block; cursor: pointer;}
-.necessary:before {content:"";width: 4px;height: 4px;display: inline-block;background: #e82d2d;border-radius: 100%;vertical-align: middle;margin-top: -13px;margin-left: 3px;}
-.necessary>div {background: #e82d2d; color: #fff; font-size: 10px; position: absolute; left: 16px; top: -2px; width: 30px; padding: 2px 0; border-radius: 4px; text-align: center; display: none;}
-.necessary:hover>div {display:block;}
-.necessary>div:before {content:"";display: inline-block;border-right: 4px solid #e82d2d;border-top: 3px solid transparent;border-bottom: 3px solid transparent;position: absolute;left: -4px;top: 5px;}
 
 
 
-[class *="status-"] {font-size: 12px;padding: 3px 8px;border-radius: 4px;word-break: keep-all;}
-.status-ing    {background:#fef9c3; color:#aa6207;}
-.status-new    {background:#fee2e2; color:#b91c1c;}
-.status-red    {background: #fff;color: #d32a1b;border: 1px solid #f3b5b5;letter-spacing: -0.5px;}
-.status-fin    {background:#f1f5f9; color:#475569;}
-.status-blue   {background:#dbeafe; color:#3b4ed8;}
-
-[class *="tooltip-"] {font-size: 13px;color: #919191;display: inline-block;padding-left: 19px;box-sizing: border-box;position: relative;word-break: keep-all;}
-[class *="tooltip-"]:before {content:"!";width: 13px;height: 13px;display: inline-block;text-align: center;line-height: 11px;color: #fff;border-radius: 100%;font-size: 10px;vertical-align: middle;margin: -2px 0 0 0;position: absolute;left: 0;top: 5px;}
-.tooltip-red {}
-.tooltip-red:before {background: #e52239;}
-.tooltip-blue {}
-.tooltip-blue:before {background: #726cee;}
 
 
 /* btn set */
@@ -384,10 +366,7 @@ input[type="date"]::-webkit-calendar-picker-indicator { position:absolute; right
 .loginWrap .box-co .checkID label {font-size: 13px;}
 .loginWrap .box-co .regist-Btn {width: 100%;height:50px;line-height: 50px;text-align: center;font-size: 16px;font-weight: 500;box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);min-width: 30%;display: inline-block;}
 
-@keyframes slideUp {
-    from  {opacity: 0; transform: translateY(50px);}
-    to    {opacity: 1; transform: translateY(0); }
-}
+
 
 
 

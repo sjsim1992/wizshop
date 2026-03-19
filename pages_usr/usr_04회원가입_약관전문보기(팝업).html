@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/user.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <script type="text/javascript" src="../assets/js/script_user.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+    <body>
+
+        <div class="container">
+                <div class="contents">
+
+                    <div class="loginWrap">
+                        <div class="box-co">
+                            <a href="#" class="goBack">뒤로가기</a>
+                            <div class="pageNm">회원가입</div>
+                            <p><span class="tooltip">필수 입력 사항입니다.</span></p>
+
+                            <div class="joinWrap">
+                                <ul class="joinInfo">
+                                    <li>
+                                        <label>이메일 계정
+                                            <span class="necessary"><div>필수</div></span>
+                                        </label>
+                                        <input type="text" placeholder="아이디로 사용할 이메일을 입력해 주세요.">
+                                        <div class="guidetxt">
+                                            <p class="blue">사용 가능한 이메일 주소 입니다.</p>
+                                            <p class="red">이메일 형식의 계정을 입력해 주시기 바랍니다.</p>
+                                            <p class="red">이미 사용중인 이메일 주소 입니다.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label>이름
+                                            <span class="necessary"><div>필수</div></span>
+                                        </label>
+                                        <div class="inputBox">
+                                            <input type="text" placeholder="한글 또는 영문 2~20자 이내로 입력해 주세요." maxlength="20">
+                                            <div class="inInput"><b>0</b>/ 20</div>
+                                        </div>
+                                        <div class="guidetxt">
+                                            <p class="red">한글 또는 영문 2~20자 이내로 입력해 주세요</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label>휴대전화번호
+                                            <span class="necessary"><div>필수</div></span>
+                                        </label>
+                                        <div class="inputBox">
+                                            <input type="text" class="phon" placeholder="휴대전화번호를 숫자만 입력해 주세요.">
+                                            <button type="button" class="inputBtn">인증번호 발송</button>
+                                        </div>
+                                        <div class="guidetxt">
+                                            <p class="grey">휴대전화 문자로 인증번호를 발송해 주세요.</p>
+                                            
+                                            <p class="grey">입력하신 휴대전화 번호로 인증번호를 발송하였습니다.<br>인증번호 수신이 안되었으면, 인증번호를 다시 발송하여 주세요.</p>
+
+                                            <p class="red">이미 사용중인 휴대전화 번호입니다.</p>
+                                            <p class="red">올바른 휴대전화 번호 형식이 아닙니다. 숫자만 입력해주세요.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label>인증번호</label>
+                                        <div class="inputBox">
+                                            <input type="text" placeholder="휴대전화번호를 숫자만 입력해 주세요.">
+                                            <button type="button" class="inputBtn">인증완료</button>
+                                        </div>
+                                        <div class="guidetxt">
+                                            <p class="grey">남은시간 : <b>03:00</b>
+                                                <button type="button" class="timebtn">시간연장</button>
+                                            </p>
+                                            <p class="blue">휴대전화 문자 인증절차가 정상적으로 완료 되었습니다.</p>
+
+                                            <p class="blue">올바른 인증번호를 입력해 주세요.</p>
+                                            <p class="red">인증번호 유효시간이 만료되었습니다.<br>인증번호를 다시 발송하여 주세요.</p>
+                                        </div>
+                                    </li>
+                                    
+
+                                    <li>
+                                        <label>비밀번호
+                                            <span class="necessary"><div>필수</div></span>
+                                        </label>
+                                        <div class="inputBox">
+                                            <input type="password" placeholder="영문, 숫자, 특수문자가 모두 들어간 8-20자" maxlength="20">
+                                            <button type="button" class="inputBtn eye">보기</button>
+                                        </div>
+                                        
+                                        <div class="inputBox">
+                                            <input type="password" class="pwCheck" placeholder="비밀번호를 한 번 더 입력해 주세요." maxlength="20" disabled/>
+                                            <button type="button" class="inputBtn eye">보기</button>
+                                        </div> 
+                                    </li>
+                                </ul>
+
+                                <div class="agreeBox">
+                                    <div class="sectionTit">약관동의</div>
+                                    <ul>
+                                        <li>
+                                            <input type="checkbox" id="agreeAll" name="agreeeee">
+                                            <label for="agreeAll">전체 동의</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="agree1" name="agreeeee" checked/>
+                                            <label for="agree1">이용약관 동의<span>필수</span></label>
+                                            <button type="button" class="viewAll-Btn">전문보기</button>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="agree2" name="agreeeee">
+                                            <label for="agree2">개인정보 수집·이용 동의<span>필수</span></label>
+                                            <button type="button" class="viewAll-Btn">전문보기</button>
+                                        </li>
+                                    </ul>
+                                    <div class="guidetxt">
+                                        <p class="red">서비스 이용을 위해 이용약관 및 개인정보 수집에 대한 동의가 필요합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a href="#" class="basic-Btn">가입완료</a>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+        </div>
+
+
+
+
+        <div class="wzpopup-wrap">
+            <div class="wzpopup">
+                <div class="pop-header"> 
+                    <span class="pop-title">약관 전문보기</span>
+                </div>
+                <div class="pop-body">
+                    <div class="pop-container">
+
+                        <!-- 팝업 내용이 들어오는 영역 -->
+
+                        <div class="basicbox narrow">
+                            <b>제1장 총칙</b><br><br>
+
+                            제1조 (목적)<br>
+
+                            본 약관은 ○○ 쇼핑몰(이하 "회사")이 제공하는 온라인 쇼핑몰 서비스(이하 "서비스")의 이용과 관련하여 회사와 이용자의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.<br>
+
+                            제2조 (정의)<br>
+                            - "이용자"란 본 약관에 따라 회사가 제공하는 서비스를 이용하는 회원 및 비회원을 말합니다.<br><br>
+
+                            <b>부칙</b><br>
+
+                            1. 공지일자 : 2026년 6월 1일<br>
+                            2. 적용일자 : 2026년 6월 1일
+
+                            <br><br><br><br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑테스트테스테테트트트트트틑
+
+                        </div>
+
+                        <!-- 팝업 내용이 들어오는 영역 END -->
+
+                    </div>
+                </div> 
+                <button type="button" class="close" title="팝업 닫기"></button>
+            </div>
+        </div>
+
+
+    
+
+
+    </body>
+</html>

@@ -214,7 +214,26 @@ textarea {border: 1px solid #e5e7eb;font-size: 14px; padding:10px 10px; border-r
 .red {color:#e11d48 !important;}
 
 
+.hide {font-size: 0;}
 
+
+
+
+[class *="status-"] {font-size: 12px;padding: 3px 8px;border-radius: 4px;word-break: keep-all;}
+.status-ing    {background:#fef9c3; color:#aa6207;}
+.status-new    {background:#fee2e2; color:#b91c1c;}
+.status-red    {background: #fff;color: #d32a1b;border: 1px solid #f3b5b5;letter-spacing: -0.5px;}
+.status-fin    {background:#f1f5f9; color:#475569;}
+.status-blue   {background:#dbeafe; color:#3b4ed8;}
+
+[class *="tooltip-"] {font-size: 13px;color: #919191;display: inline-block;padding-left: 19px;box-sizing: border-box;position: relative;word-break: keep-all;}
+[class *="tooltip-"]:before {content:"!";width: 13px;height: 13px;display: inline-block;text-align: center;line-height: 11px;color: #fff;border-radius: 100%;font-size: 10px;vertical-align: middle;margin: -2px 0 0 0;position: absolute;left: 0;top: 5px;}
+.tooltip-red {}
+.tooltip-red:before {background: #e52239;}
+.tooltip-blue {}
+.tooltip-blue:before {background: #726cee;}
+.tooltip-grey {}
+.tooltip-grey:before {background: #ddd;}
 
 
 /* paging */
@@ -245,3 +264,19 @@ ul.num li.next a:hover::after {border-color: #4f46e5;}
 ul.num li.num a:not(.on):hover { color: #000; text-decoration: none; } 
 ul.num li.num a:not(.on)::before {content: '';position: absolute;top: 0;left: 50%;transform: translateX(-50%) translateY(-5px);width: 4px;height: 4px;background: #4f46e5;border-radius: 50%;opacity: 0;transition: all 0.3s ease;} 
 ul.num li.num a:not(.on):hover::before { opacity: 1; transform: translateX(-50%) translateY(2px); } 
+
+
+.necessary {position: relative; height: 5px; display: inline-block; cursor: pointer;}
+.necessary:before {content:"";width: 4px;height: 4px;display: inline-block;background: #e82d2d;border-radius: 100%;vertical-align: middle;margin-top: -13px;margin-left: 3px;}
+.necessary>div {background: #e82d2d; color: #fff; font-size: 10px; position: absolute; left: 16px; top: -2px; width: 30px; padding: 2px 0; border-radius: 4px; text-align: center; display: none;}
+.necessary:hover>div {display:block;}
+.necessary>div:before {content:"";display: inline-block;border-right: 4px solid #e82d2d;border-top: 3px solid transparent;border-bottom: 3px solid transparent;position: absolute;left: -4px;top: 5px;}
+
+
+
+
+
+@keyframes slideUp {
+    from  {opacity: 0; transform: translateY(50px);}
+    to    {opacity: 1; transform: translateY(0); }
+}
